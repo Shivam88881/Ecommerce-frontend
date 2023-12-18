@@ -1,0 +1,118 @@
+@import "mixin";
+
+.container {
+    @include flex(row, 3vmax);
+
+    .product-detail-container {
+        min-width: 30vmax;
+        max-width: 400px;
+        min-height: 35vmax;
+        box-shadow: 5px 2px 8px 1.5px rgba(0, 0, 0, 0.12);
+
+        .product-detail-form {
+            margin-top: 3.5vmax;
+            margin-left: 1vmax;
+            margin-right: 0.81vmax;
+            @include flex(column, 1rem);
+
+            .name,
+            .price,
+            .description,
+            .category,
+            .stock {
+                >input {
+                    text-align: left;
+                    padding-left: 3vmax;
+                    padding-right: 1vmax;
+                    width: 75%;
+                    outline: none;
+                    height: 2.2vmax;
+                    font: 300 0.9vmax cursive;
+                    border-radius: 4px;
+                    outline: none;
+                    border: 1px solid rgba(0, 0, 0, 0.378);
+                }
+
+                >select {
+                    text-align: left;
+                    width: 90%;
+                    height: 2.2vmax;
+                    font: 300 0.9vmax cursive;
+                    border-radius: 4px;
+                    outline: none;
+                    border: 1px solid rgba(0, 0, 0, 0.378);
+                }
+
+                >svg {
+                    padding-top: 0.4vmax;
+                    position: absolute;
+                    transform: translateX(1vmax);
+                    font-size: 1.6vmax;
+                    color: rgba(0, 0, 0, 0.623) !important;
+                    margin: 0 auto;
+                }
+            }
+
+            .images input[type="file"] {
+                padding-left: 2vmax;
+                width: 82%;
+                height: 2.2vmax;
+                cursor: pointer;
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.378);
+                border-radius: 4px;
+
+                &::-webkit-file-upload-button {
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                    height: 90%;
+                    min-width: 7vmax;
+                    border: none;
+                    border-radius: 5vmax;
+                    padding: 0;
+                    margin: auto;
+                    margin-right: 1vmax;
+                    margin-top: 0.15vmax;
+                    background-color: tomato;
+                    color: white;
+                    font: 300 1vmax "Roboto";
+                }
+            }
+
+            >button {
+                margin: auto;
+                width: 40%;
+                height: 2rem;
+                color: white;
+                background-color: tomato;
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.378);
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: rgb(194, 35, 8);
+                }
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    .preview {
+        min-width: 30vmax;
+        max-width: 400px;
+        min-height: 35vmax;
+        box-shadow: 5px 2px 8px 1.5px rgba(0, 0, 0, 0.12);
+        @include flex(row, 1vmax);
+        flex-wrap: wrap;
+        overflow-y: auto;
+        .image {
+            max-height: 12vmax;
+            padding: 1vmax;
+            >img {
+                width: 8vmax;
+            }
+        }
+    }
+}

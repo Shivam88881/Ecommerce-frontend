@@ -1,0 +1,183 @@
+@import "mixin";
+
+.product-details {
+  width: 100vw;
+  max-width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  @include flex(row, 0);
+  > div {
+    width: 100%;
+    // border: 1px solid rgb(0, 0, 0);
+  }
+
+  .carousel-image {
+    width: 25vmax;
+  }
+  .product-details-block {
+    padding: 1rem;
+    .product-details-block1 {
+      h2 {
+        text-align: left;
+        color: rgb(54, 54, 54);
+        font: 600 1.6vmax "Roboto";
+      }
+      p {
+        margin-top: 0.5rem;
+        color: rgba(54, 54, 54, 0.582);
+        font: 200 0.6vmax cursive;
+      }
+    }
+
+    @include flex(column, 0, unset, flex-start);
+
+    .product-details-block2 {
+      @include flex(row, 1rem, unset, center);
+      border-top: 1px solid rgba(0, 0, 0, 0.205);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+      margin-top: 0.5rem;
+      width: 70%;
+
+      > span {
+        color: rgba(29, 28, 28, 0.682);
+        font: 200 0.6vmax cursive;
+      }
+    }
+    .product-details-block3 {
+      margin-top: 1rem;
+      width: 70%;
+      @include flex(row, 0);
+      > button {
+        border: none;
+        background-color: rgba(0, 0, 0, 0.616);
+        padding: 0.5vmax;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        color: white;
+        transition: all 0.5s;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.767);
+        }
+      }
+      > input {
+        border: none;
+        padding: 0.5vmax;
+        width: 2vmax;
+        outline: none;
+        font: 400 0.8vmax "Roboto";
+        color: rgba(0, 0, 0, 0.74);
+      }
+      .add-to-cart {
+        border: none;
+        cursor: pointer;
+        color: white;
+        transition: all 0.5s;
+        background-color: tomato;
+        font: 500 0.7vmax 2vmax;
+        border-radius: 20px;
+        padding: 0.5vmax 1vmax;
+        margin-left: 1rem;
+        outline: none;
+        &:hover {
+          background-color: rgba(201, 0, 0, 0.767);
+        }
+      }
+    }
+    .product-details-block4 {
+      > h1 {
+        color: rgba(17, 17, 17, 0.795);
+        font: 400 1.8vmax "franklin Gothic Medium";
+        margin: 1vmax 0;
+      }
+    }
+    .product-details-block5 {
+      text-align: left;
+      width: 70%;
+      > h3 {
+        color: rgb(0, 0, 0, 0.651);
+        border-top: 1px solid rgba(0, 0, 0, 0.205);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+        width: 100%;
+        text-align: left;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font: 400 1vmax "Roboto";
+      }
+
+      > h4 {
+        margin-top: 1rem;
+        color: rgb(0, 0, 0, 0.891);
+        width: 100%;
+        text-align: left;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font: 400 1vmax "Roboto";
+        display: inline-flex;
+        > p {
+          padding-left: 3px;
+          padding-top: 0.1rem;
+          text-align: left;
+          color: rgb(0, 0, 0, 0.534);
+          font: 300 0.8vmax sans-serif;
+        }
+      }
+    }
+
+    .submit-review {
+      border: none;
+      background-color: tomato;
+      font: 500 0.7vmax "Roboto";
+      border-radius: 20px;
+      padding: 0.6vmax 2vmax;
+      margin: 1vmax 0;
+      color: white;
+      cursor: pointer;
+      transition: all 0.5s;
+      outline: none;
+      &:hover {
+        background-color: rgba(201, 0, 0, 0.767);
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+.review-heading {
+  color: rgba(0, 0, 0, 0.726);
+  font: 700 1.4vmax "Roboto";
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+  padding: 1vmax;
+  width: 20vmax;
+  margin-bottom: 4vmax;
+  margin: auto;
+}
+
+
+.reviews {
+  .no-review {
+    color: rgba(0, 0, 0, 0.605);
+    font: 500 1.3vmax cursive;
+    margin: 3rem auto;
+  }
+  > div {
+    @include flex(row, 1rem, left, center);
+    overflow: auto;
+    /* Custom scrollbar styling */
+    &::-webkit-scrollbar {
+      height: 0.8vmax;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f0f0f0;
+    }
+
+    /* Hide the default scrollbar buttons */
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+  }
+}

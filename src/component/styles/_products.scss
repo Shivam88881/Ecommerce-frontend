@@ -1,0 +1,102 @@
+@import "mixin";
+
+.products-container {
+  @include grid(1fr 6fr, 1rem);
+
+  >button{
+    outline: none;
+    color: white;
+    background: tomato;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 5.5vmax;
+    font: 500 2.5vmax "Roboto";
+  }
+
+  .filter-box {
+    padding: 1rem;
+    padding-left: 3rem;
+    @include flex(column, 0, center);
+    > p {
+      text-align: left;
+    }
+    min-height: 90vh;
+    .category-box{
+       padding: 0;
+      .category-link{
+        list-style: none;
+        text-align: left;
+        color: rgba(0,0,0,0.61);
+        font: 400 0.8vmax "Roboto";
+        margin: 0.4vmax;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover{
+          color: tomato;
+        }
+      }
+    }
+    >fieldset{
+      border: 1px solid rgba(0,0,0,0.329);
+    }
+  }
+  > div {
+    min-height: 60vmax;
+    .products-heading {
+      margin-top: 3rem;
+    }
+    .products {
+      width: 100%;
+      padding-right: 2rem;
+      @include flex(row, 3rem);
+      flex-wrap: wrap;
+      margin: 0 auto;
+      overflow-y: auto;
+      height: 90%;
+      &::-webkit-scrollbar{
+        display: none;
+      }
+      margin-top: 1rem;
+    }
+
+    .pagination-box {
+      @include flex(row, 0, center, center);
+      margin: 6vmax;
+      .pagination {
+        @include flex(row, 1rem, center);
+        padding: 0;
+        .page-item {
+          cursor: pointer;
+          list-style: none;
+          transition: all 0.3s;
+          border: 1px solid rgba(241, 29, 29, 0.952);
+          border-radius: 5px;
+          padding: 0.3rem;
+          font-size: 1.1vmax;
+          &:hover {
+            background-color: rgba(247, 13, 13, 0.852);
+            .page-link {
+              color: white;
+            }
+          }
+          .page-link {
+            text-decoration: none;
+            color: tomato;
+          }
+        }
+
+        .pageItemActive {
+          background-color: rgba(247, 13, 13, 0.852);
+          .pageLinkActive {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

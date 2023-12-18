@@ -1,0 +1,186 @@
+@import "mixin";
+
+.login-signup-container {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: rgba(231, 231, 231);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0;
+
+  .login-signup-box {
+    width: 25vw;
+    height: 60vh;
+    background-color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+    > div {
+      text-align: left;
+      .login-signup-toggle {
+        @include flex(row, 0);
+        height: 3vmax;
+
+        > p {
+            color: rgba(0, 0, 0, 0.678);
+            font: 300 1vmax "Roboto";
+            transition: all 0.5s;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            width: 100%;
+
+            &:hover {
+                color: tomato;
+            }
+        }
+      }
+
+        >button {
+            background-color: tomato;
+            height: 3px;
+            width: 50%;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.378);
+            border-radius: 4px;
+            transition: all 0.5s;
+            &:hover{
+                background-color: rgb(194, 35, 8);
+            }
+            cursor: pointer;
+        }
+    }
+    .login-form {
+        @include flex(column,0);
+        .login-email, .login-password{
+            margin-top: 3vmax;
+            margin-left: 1vmax;
+            margin-right: 1vmax;
+            > input {
+                text-align: left;
+                padding-left: 3vmax;
+                padding-right: 1vmax;
+                width: 75%;
+                height: 2.2vmax;
+                font: 300 0.9vmax cursive;
+                border-radius: 4px;
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.678);
+            }
+
+            >svg{
+                padding-top: 0.4vmax;
+                position: absolute;
+                transform: translateX(1vmax);
+                font-size: 1.6vmax;
+                color: rgba(0,0,0,0.623);
+                margin: 0 auto;
+            }
+        }
+        >a{
+            text-align: right;
+            text-decoration: none;
+            color: rgba(0,0,0,0.45);
+            font: 300 0.8vmax "Roboto";
+            margin-right: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        >button{
+            margin: auto;
+            margin-top: 2rem;
+            width: 40%;
+            height: 2rem;
+            color: white;
+            background-color: tomato;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.378);
+            border-radius: 4px;
+
+            &:hover{
+                background-color: rgb(194, 35, 8);
+            }
+            cursor: pointer;
+        }
+    }
+
+    .signup-form{
+        margin-top: 3.5vmax;
+        margin-left: 1vmax;
+        margin-right: 0.81vmax;
+        @include flex(column,1rem);
+        .name, .username, .register-email, .signup-password, .signup-confirm-password{
+            > input {
+                text-align: left;
+                padding-left: 3vmax;
+                padding-right: 1vmax;
+                width: 75%;
+                height: 2.2vmax;
+                font: 300 0.9vmax cursive;
+                border-radius: 4px;
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.678);
+            }
+
+            >select{
+                text-align: left;
+                padding-left: 3vmax;
+                padding-right: 1vmax;
+                width: 75%;
+                height: 2.2vmax;
+                font: 300 0.9vmax cursive;
+                border-radius: 4px;
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.678);
+            }
+
+            >svg{
+                padding-top: 0.4vmax;
+                position: absolute;
+                transform: translateX(1vmax);
+                font-size: 1.6vmax;
+                color: rgba(0,0,0,0.623);
+                margin: 0 auto;
+            }
+        }
+
+        >button{
+            margin: auto;
+            width: 40%;
+            height: 2rem;
+            color: white;
+            background-color: tomato;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.378);
+            border-radius: 4px;
+
+            &:hover{
+                background-color: rgb(194, 35, 8);
+            }
+            cursor: pointer;
+        }
+    }
+  }
+}
+
+.signup-form{
+    transform: translateY(-100%) translateX(-100vmax);
+}
+
+.shift-to-left {
+  transform: translateX(-100%);
+}
+
+.shift-to-neutral {
+  transform: translateX(0%);
+}
+
+.shift-to-neutral-form {
+  transform: translateX(0%) translateY(-100%);
+}
+
+.shift-to-right {
+  transform: translateX(100%);
+}

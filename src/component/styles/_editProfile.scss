@@ -1,0 +1,83 @@
+@import "mixin";
+
+.update-profile {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: rgba(231, 231, 231);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  .update-container {
+    width: 30%;
+    height: 70%;
+    padding: 2vmax;
+    background-color: white;
+    > h2 {
+      font: 500 2vmax "Roboto";
+      color: rgba(0, 0, 0, 0.625);
+    }
+    > div {
+      margin: 2vmax;
+      @include flex(row, 0);
+      > input {
+        text-align: left;
+        padding-left: 3vmax;
+        padding-right: 1vmax;
+        width: 75%;
+        height: 2.2vmax;
+        font: 300 0.9vmax cursive;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.678);
+      }
+      > img {
+        width: 5vmax;
+        border-radius: 50%;
+      }
+      > svg {
+        padding-top: 0.4vmax;
+        position: absolute;
+        transform: translateX(1vmax);
+        font-size: 1.6vmax;
+        color: rgba(0, 0, 0, 0.623);
+        margin: 0 auto;
+      }
+    }
+    .image-input {
+      @include flex(row, 1vmax,unset, center);
+      > input {
+        width: 62%;
+        outline: none;
+        background-color: white;
+        text-align: left;
+        padding-left: 0;
+        &::-webkit-file-upload-button {
+          margin-top: 0.5vmax;
+          outline: none;
+          border: none;
+          background-color: white;
+          font-family: cursive;
+        }
+      }
+    }
+    > button {
+      margin: auto;
+      margin-top: 2rem;
+      width: 40%;
+      height: 2rem;
+      color: white;
+      background-color: tomato;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.378);
+      border-radius: 4px;
+
+      &:hover {
+        background-color: rgb(194, 35, 8);
+      }
+      cursor: pointer;
+    }
+  }
+}

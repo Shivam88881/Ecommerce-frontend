@@ -1,0 +1,56 @@
+.container{
+    height: 100%;
+    width: 100%;
+    >div{
+        margin: auto;
+        width: 30vmax;
+        height: 20vmax;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.325);
+
+        >h2{
+            margin-top: 1.5vmax;
+            font: 500 1.3vmax;
+            color: rgba(0,0,0,0.625);
+        }
+
+        >div{
+            margin-top: 1vmax;
+            >svg{
+                padding-top: 0.4vmax;
+                position: absolute;
+                transform: translateX(0.3vmax);
+                font-size: 1.6vmax;
+                color: rgba(0,0,0,0.623)!important;
+                margin: 0 auto;
+            }
+            >input{
+                height: 2.2vmax;
+                width: 80%;
+                text-align: left;
+                outline: none;
+                border: 1px solid rgba(0,0,0,0.325);
+                padding-left: 2vmax ;
+                border-radius: 6px;
+                font-family: cursive;
+            }
+        }
+
+        >button{
+            margin: auto;
+            margin-top: 2rem;
+            width: 30%;
+            height: 2rem;
+            color: white;
+            background-color: tomato;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            transition: all 0.5s;
+            font-size: 1.1vmax;
+            &:hover{
+                background-color: rgb(194, 35, 8);
+            }
+            cursor: pointer;
+        }
+    }
+}

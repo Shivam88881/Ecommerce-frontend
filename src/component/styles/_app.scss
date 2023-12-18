@@ -1,0 +1,55 @@
+@import "mediaQuery";
+@import "mixin";
+
+* {
+  text-align: center;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+// Chrome, Safari, Edge, Opera
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+//Firefox
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.admin-container{
+    @include grid(1fr 4fr,0.5vmax);
+    height: 95vh;
+    .sidbar{
+        overflow-y: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    .main{
+        height: 95vh;
+        overflow-y: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        padding: 1vmax;
+        border-left: 1px solid rgba(0,0,0,0.125);
+        >h2{
+            margin-top: 2vmax;
+            font: 500 1.7vmax "Roboto";
+            color: rgba(0,0,0,0.625);
+        }
+    }
+}

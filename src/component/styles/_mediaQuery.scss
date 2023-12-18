@@ -1,0 +1,364 @@
+@import "mixin";
+
+@media screen and (max-width: 1190px) {
+  .product-card {
+    > div {
+      flex-direction: column !important;
+      text-align: left;
+      > span {
+        margin-top: 0.1rem !important;
+      }
+    }
+  }
+  .login-signup-box {
+    width: 320px !important;
+    height: 400px !important;
+    .signup-form {
+      margin-top: 7vmax !important;
+    }
+  }
+  .update-password-container{
+    .form-container{
+      width: 300px !important;
+      height: 50vh !important;
+      >h2{
+        font-size: 2vmax !important;
+      }
+      .form{
+        width: 100% !important;
+        >div{
+          >input{
+            height: 3vmax !important;
+            font-size: 1.4vmax !important;
+          }
+          >svg{
+            padding-top: 1vmax !important;
+          }
+        }
+      }
+    }
+  }
+
+  .update-profile{
+    .update-container{
+      width: 300px !important;
+      height: 50% !important;
+      >div{
+        >input{
+          font-size: 1.4vmax !important;
+        }
+      }
+      .image-input{
+        >img{
+          width: 8vmax !important;
+        }
+        >input{
+          padding: 0.7vmax !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .show-sidebar-btn{
+    width: 100% !important;
+    height: 4vmax !important;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+    font-size: 1.5vmax;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    &:hover{
+      background-color: rgb(168, 44, 22);
+    }
+  }
+  .admin-container{
+    grid-template-columns: 1fr !important;
+    .main{
+      margin-top: 4vmax !important;
+      .line-chart{
+        width: 95% !important;
+        >canvas{
+          margin: auto !important;
+        }
+      }
+      .doughnut-chart{
+        width: 95% !important;
+        >canvas{
+          margin: auto !important;
+        }
+      }
+      >h2{
+        font-size: 2.5vmax !important;
+      }
+      .container{
+        .product-detail-container{
+          width: 300px !important;
+          margin-right: 10vmax !important;
+          height: 55% !important;
+          .product-detail-form{
+            width: 95% !important;
+            >div{
+              >svg{
+                padding-top: 0.8vmax !important;
+              }
+              >input{
+                font-size: 1.4vmax !important;
+              }
+              >select{
+                width: 85% !important;
+                height: 2.5vmax !important;
+              }
+            }
+          }
+        }
+        .preview{
+          width: 300px !important;
+          margin-right: 10vmax !important;
+        }
+      }
+      .user-update-container{
+        flex-direction: column !important;
+        .user-details-container{
+          border-right: none !important;
+          min-height: 30vh !important;
+        }
+        .role-change{
+          width: 300px !important;
+          height: 30vmax !important;
+          >select{
+            width: 85% !important;
+            height: 2.7vmax !important;
+          }
+          >div{
+            >input{
+              font-size: 1.4vmax !important;
+              >svg{
+                padding-top: 0.8vmax !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .product-create-container{
+    flex-direction: column !important;
+  }
+  .product-details {
+    flex-direction: column !important;
+    padding: 0.5rem !important;
+    .product-details-block {
+      align-items: left !important;
+    }
+    .product-details-block1 {
+      p {
+        font-size: 1vmax !important;
+      }
+    }
+    .product-details-block2 {
+      > span {
+        font-size: 1vmax !important;
+      }
+    }
+    .product-details-block3 {
+      > input {
+        padding: 1vmax !important;
+        width: 2vmax !important;
+        font-size: 1.5vmax !important;
+      }
+    }
+    .product-details-block5 {
+      > h4 {
+        > p {
+          font-size: 1vmax !important;
+        }
+      }
+    }
+  }
+
+  .submit-review {
+    font-size: 1.5vmax !important;
+    padding: 1vmax 2vmax !important;
+  }
+
+  .login-signup-box {
+    width: 320px !important;
+    height: 400px !important;
+    .login-form {
+      .login-email,
+      .login-password {
+        > input {
+          font-size: 1.6vmax !important;
+          height: 2.5vmax !important;
+        }
+        > svg {
+          padding-top: 0.6vmax !important;
+        }
+      }
+    }
+    .signup-form {
+      margin-top: 7vmax !important;
+      .name,
+      .username,
+      .register-email,
+      .signup-password,
+      .signup-confirm-password {
+        > input {
+          font-size: 1.6vmax !important;
+          height: 2.5vmax !important;
+        }
+        > svg {
+          padding-top: 0.6vmax !important;
+        }
+      }
+    }
+  }
+
+  .products-container{
+    grid-template-columns:1fr !important;
+
+    .filter-box {
+      margin-top: 5vmax !important;
+      min-height: 7vmax !important;
+      width: 80% !important;
+      padding-left: 1.5vmax !important;
+
+      .category-box{
+
+        .category-link{
+          font: 400 1.3vmax "Roboto" !important;
+        }
+      }
+    }
+  }
+
+  .cart-header{
+    grid-template-columns: 3fr 2fr 1fr !important;
+  }
+
+  .cartPage{
+    .cart-items{
+      width: 95% !important;
+    }
+    .cart-header{
+      width: 95% !important;
+      height: 3vmax !important;
+      font-size: 1.3vmax !important;
+    }
+
+    .gross-total, .checkout-btn{
+      width: 95% !important;
+    }
+  }
+
+  .item-card {
+    grid-template-columns: 3fr 2fr 1fr !important;
+
+    .item-detail {
+      > img {
+        width: 8vmax !important;
+      }
+
+      >div{
+        .product-name{
+          font: 300 1.3vmax cursive !important;
+      }
+
+      >p{
+        font-size: 1.3vmax !important;
+      }
+
+      .remove-btn{
+        font-size: 1.3vmax !important;
+      }
+      }
+    }
+  }
+
+  .profile{
+    gap: 0.5vmax !important;
+    .profile-container{
+      >div{
+        margin: 0 !important;
+        width: 50% !important;
+        margin-left: 10vmax !important;
+        >img{
+          width: 20vmax !important;
+          height: 20vmax !important;
+        }
+      }
+    }
+    .profile-details{
+      margin-left: 1vmax !important;
+    }
+  }
+  .search-box{
+    >input{
+      font-size: 1.4vmax !important;
+      width: 65% !important;
+    }
+    >button{
+      width: 10vmax !important;
+      font-size: 1.3vmax !important;
+      border-radius: 5px !important;
+    }
+  }
+  .payment-form{
+    width: 300px !important;
+    >div{
+      >div{
+        >svg{
+          transform: translateX(7vmax) !important;
+        }
+      }
+    }
+  }
+  .confirm-order-container{
+    flex-direction: column !important;
+    .shipping-info{
+      width: 90% !important;
+      border-right: none !important;
+    }
+    .order-summery{
+      width: 90% !important;
+      margin-right: 2vmax !important;
+    }
+  }
+  .order-update-container{
+    flex-direction: column !important;
+    .order-details-container{
+      width: 95% !important;
+      border-right: none !important;
+    }
+    .status-change{
+      width: 80% !important;
+    }
+  }
+  .shipping-box{
+    width: 300px !important;
+    .shipping-form{
+      width: 100% !important;
+
+      >div{
+        >svg{
+          padding-top: 0.8vmax !important;
+        }
+
+        >input{
+          font-size: 1.4vmax !important;
+        }
+        >select{
+          width: 90% !important;
+          height: 2.7vmax !important;
+        }
+      }
+    }
+  }
+}

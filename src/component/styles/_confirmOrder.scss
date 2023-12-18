@@ -1,0 +1,117 @@
+@import "mixin";
+
+.confirm-order-container {
+  margin-top: 5vmax;
+  @include flex(row, 0, center, center);
+  .shipping-info {
+    width: 55%;
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+    > div {
+      > h2 {
+        text-align: left;
+        font: 500 1.7vmax "Roboto";
+        color: rgba(0, 0, 0, 0.825);
+      }
+      .address-details {
+        margin-left: 2vmax;
+        margin-top: 1.5vmax;
+        > p {
+          text-align: left;
+          margin-top: 1vmax;
+          font: 300 1vmax "Roboto";
+          color: rgba(0, 0, 0, 0.625);
+          >span{
+            color: rgba(0, 0, 0, 0.925);
+          }
+        }
+      }
+      .cart-items {
+        margin-top: 3vmax;
+        width: 100%;
+        > h2 {
+            text-align: left;
+            font: 500 1.7vmax "Roboto";
+            color: rgba(0, 0, 0, 0.825);
+          }
+        .cart-item-detail {
+            margin-top: 1.5vmax;
+          @include flex(1fr 2fr 1fr, 0);
+          > img {
+            width: 6vmax;
+          }
+          .item-name {
+            width: 40%;
+            text-align: left;
+            margin: auto 0;
+            margin-left: 3vmax;
+            font: 400 1.1vmax "Roboto";
+            color: rgba(0, 0, 0, 0.625);
+          }
+          .item-total-price {
+            text-align: left;
+            place-items: end;
+            margin: auto 0;
+            font: 300 1.1vmax "Roboto";
+            color: rgba(0, 0, 0, 0.625);
+            >span{
+                font: 600 1.1vmax "Roboto";
+            color: rgba(0, 0, 0, 0.625);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .order-summery {
+    padding-left: 4vmax;
+    width: 20%;
+    > h2 {
+        font: 500 1.7vmax "Roboto";
+        color: rgba(0, 0, 0, 0.825);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+        padding-bottom: 2vmax;
+      }
+    .summary {
+      > div {
+        @include flex(row, 0, space-between, center);
+        margin-top: 1.4vmax;
+        >p{
+            font: 300 1vmax "Roboto";
+        color: rgba(0, 0, 0, 0.625);
+        }
+        }
+        .charges{
+            font: 400 1.1vmax "Roboto";
+        color: rgba(0, 0, 0, 0.925);
+        }
+
+        .total{
+            border-top: 2px solid rgba(0, 0, 0, 0.3);
+            padding-top: 3vmax;
+
+            >p{
+                font: 600 1.2vmax "Roboto";
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+      }
+
+      >button{
+        margin: 2vmax auto;
+        width: 93%;
+        height: 2rem;
+        color: white;
+        background-color: tomato;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+
+        &:hover{
+            background-color: rgb(194, 35, 8);
+        }
+        cursor: pointer;
+    }
+    }
+  }
+

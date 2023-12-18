@@ -1,0 +1,23 @@
+@import "mixin";
+
+.review-card{
+    flex: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.226);
+    border: 1px solid rgba(56,56,56,0.116);
+    width: 30vmax;
+    @include flex(column,0,unset,center);
+    padding: 2vmax 1vmax;
+    margin: 1vmax;
+    >img{
+        width: 5vmax;
+    }
+    >span{
+        color: rgba(0,0,0,0.836);
+        font: 600 0.9vmax "Roboto";
+    }
+    >p{
+        color: rgba(0,0,0,0.445);
+        font: 300 0.8vmax cursive;
+    }
+}
+

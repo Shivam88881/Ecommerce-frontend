@@ -1,0 +1,105 @@
+@import "mixin";
+
+.empty-cart{
+  width: 100%;
+  position: sticky;
+  background-color: white;
+  min-height: 60vh;
+  display: grid;
+  place-content: center;
+  >svg{
+    margin: auto;
+    color: tomato;
+    font-size: 8vmax;
+  }
+
+  >h2{
+    font: 600 1.7vmax ;
+    color: rgba(0,0,0,0.75);
+  }
+
+  >a{
+    margin-top: 2vmax;
+    > button {
+      border: none;
+      background-color: rgb(59, 59, 59);
+      padding: 0.7vmax;
+      width: 15vmax;
+      color: white;
+      border-radius: 30px;
+      transition: all 0.5s;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(31, 31, 31, 0.767);
+      }
+    }
+  }
+}
+
+.cartPage {
+  width: 100%;
+  position: sticky;
+  background-color: white;
+  min-height: 60vh;
+  .cart-header {
+    @include grid(4fr 1fr 1fr, 0);
+    margin: auto;
+    margin-top: 2.5vmax;
+    width: 75%;
+    height: 2vmax;
+    color: white;
+    font-size: 0.8vmax;
+    background-color: tomato;
+    padding: 0 2vmax;
+    > p {
+      text-align: left;
+      margin: auto 0;
+    }
+    .subtotal {
+      text-align: right;
+    }
+  }
+  .cart-items {
+    width: 75%;
+    margin: auto;
+  }
+
+  .gross-total {
+    margin: auto;
+    margin-top: 2vmax;
+    @include flex(column, 1vmax);
+    align-items: flex-end;
+    width: 75%;
+    .line {
+      min-height: 3px;
+      width: 33%;
+      background-color: tomato;
+    }
+    .amount-calculation {
+      width: 33%;
+      @include flex(row, 0, space-between, center);
+      font-size: 1vmax;
+    }
+  }
+
+  .checkout-btn {
+    width: 75%;
+    display: grid;
+    place-items: end;
+    margin: auto;
+    margin-top: 3vmax;
+    > button {
+      border: none;
+      background-color: tomato;
+      padding: 0.7vmax;
+      width: 15vmax;
+      color: white;
+      border-radius: 30px;
+      transition: all 0.5s;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(241, 12, 12, 0.767);
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import "mixin";
+
+.order-details-container {
+  min-height: 50vh;
+  margin: 3vmax;
+  .order-id {
+    margin-top: 7vmax;
+    > h2 {
+      text-align: left;
+      font: 700 2vmax cursive;
+      color: rgb(239, 111, 89);
+    }
+  }
+  .shipping-info {
+    margin-top: 2vmax;
+    > div {
+      > h2 {
+        text-align: left;
+        font: 500 1.7vmax "Roboto";
+        color: rgba(0, 0, 0, 0.825);
+      }
+      .address-details {
+        margin-left: 2vmax;
+        margin-top: 1.5vmax;
+        > p {
+          text-align: left;
+          margin-top: 1vmax;
+          font: 300 1vmax "Roboto";
+          color: rgba(0, 0, 0, 0.625);
+          > span {
+            color: rgba(0, 0, 0, 0.925);
+          }
+        }
+      }
+      .payment-info,
+      .order-status {
+        margin-top: 2vmax;
+        > h2 {
+          text-align: left;
+          font: 500 1.7vmax "Roboto";
+          color: rgba(0, 0, 0, 0.825);
+        }
+        > p {
+          text-align: left;
+          margin-top: 1vmax;
+          margin-left: 2vmax;
+          font: 300 1vmax "Roboto";
+          color: rgba(0, 0, 0, 0.625);
+          > span {
+            color: rgba(0, 0, 0, 0.925);
+          }
+        }
+      }
+      .ordered-items {
+        margin-top: 2vmax;
+        width: 100%;
+        border-top: 1px solid rgba(0, 0, 0, 0.325);
+        padding-top: 1.3vmax;
+        > h2 {
+          text-align: left;
+          font: 500 1.7vmax "Roboto";
+          color: rgba(0, 0, 0, 0.825);
+        }
+        .ordered-item-detail {
+          margin-top: 1.5vmax;
+          @include grid(0.3fr 0.8fr 0.8fr 0.2fr, 0);
+          > img {
+            width: 6vmax;
+          }
+          .item-name {
+            width: 40%;
+            text-align: left;
+            margin: auto 0;
+            margin-left: 3vmax;
+            font: 400 1.1vmax "Roboto";
+            color: rgba(0, 0, 0, 0.625);
+          }
+          .item-total-price {
+            text-align: left;
+            place-items: end;
+            margin: auto 0;
+            font: 300 1.1vmax "Roboto";
+            color: rgba(0, 0, 0, 0.625);
+            > span {
+              font: 600 1.1vmax "Roboto";
+              color: rgba(0, 0, 0, 0.625);
+            }
+          }
+
+          > button {
+            height: 2vmax;
+            border: none;
+            cursor: pointer;
+            color: white;
+            transition: all 0.5s;
+            background-color: tomato;
+            font: 500 0.7vmax 2vmax;
+            border-radius: 20px;
+            padding-left: 1vmax;
+            padding-right: 1vmax;
+            margin: auto;
+            outline: none;
+            font: 300 0.8vmax "Roboto";
+            &:hover {
+              background-color: rgba(201, 0, 0, 0.767);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.submit-dialog{
+  @include flex(column,1vmax);
+
+  >textarea{
+    text-align: left;
+  }
+}

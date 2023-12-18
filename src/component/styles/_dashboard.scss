@@ -1,0 +1,43 @@
+@import "mixin";
+
+.dashboard-box-1{
+    height: 4vmax;
+    background-color: tomato;
+    color: white;
+    @include flex(row,0,center,center);
+    margin-top: 1vmax;
+}
+
+.dashboard-box-2{
+    @include flex(row, 3vmax,center);
+    margin-top: 2vmax;
+    >a{
+        text-decoration: none;
+        >div{
+            height: 12vmax;
+            width: 12vmax;
+            background-color: rgb(184, 63, 105);
+            border-radius: 100%;
+            @include flex(column,0,center,center);
+            color: white;
+        }
+
+        .orders-container{
+            background-color: rgb(179, 172, 45);
+        }
+
+        .users-container{
+            background-color: rgb(151, 103, 14);
+        }
+    }
+}
+
+.line-chart{
+    width: 80%;
+    margin: 3vmax auto;
+}
+
+.doughnut-chart{
+    width: 30vmax;
+    margin: 3vmax auto;
+}

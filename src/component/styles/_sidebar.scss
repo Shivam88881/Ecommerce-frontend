@@ -1,0 +1,40 @@
+@import "mixin";
+
+.sidebar{
+    margin-left: 3vmax;
+    a{
+        text-decoration: none;
+        padding: 1vmax;
+        &:hover{
+            color: tomato;
+        }
+    }
+    >a{
+        text-decoration: none;
+        &:hover{
+            color: tomato;
+            transform: scale(1.1);
+        }
+        >p{ 
+            @include flex(row,1vmax,left,center);
+        }
+        >img{
+            width: 70%;
+            padding: 0;
+            &:hover{
+                filter: drop-shadow(0 0 10px tomato);
+            }
+        }
+        .MuiTreeItem-label{
+            text-align: left;
+            margin-left: 0.55vmax;
+        }
+        >ul{
+            >li{
+                >a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

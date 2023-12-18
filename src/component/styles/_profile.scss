@@ -1,0 +1,70 @@
+@import "mixin";
+
+.profile{
+    @include flex(row,6vmax,center,center);
+    .profile-container{
+        >div{
+            margin: 7vmax;
+            @include flex(column,1vmax);
+            >h1{
+                text-align: left;
+                color: rgba(0,0,0,0.625);
+                font: 500 2.2vmax "Roboto";
+            }
+            >img{
+                width: 30vmax;
+                height: 30vmax;
+                border-radius: 100%;
+            }
+            >a{
+                text-decoration: none;
+                background-color: tomato;
+                color: white;
+                width: 20vmax;
+                padding: 0.5vmax;
+                margin: auto;
+                cursor: pointer;
+                transition: all 0.5s;
+
+                &:hover{
+                    background-color: rgb(183, 42, 17);
+                }
+            }
+        }
+    }
+    .profile-details{
+        margin: 7vmax;
+        >div{
+            padding: 1vmax;
+            >h4{
+                text-align: left;
+                font: 100 1.7vmax "Roboto";
+
+            }
+            >p{
+                text-align: left;
+                color: rgba(0,0,0,0.625);
+                font: 100 1.4vmax cursive;
+            }
+            
+        }
+        .links{
+            @include flex(column,2vmax);
+            >a{
+                text-decoration: none;
+                background-color: rgba(19, 19, 19, 0.747);
+                color: white;
+                width: 25vmax;
+                padding: 0.5vmax;
+                margin: auto;
+                font-size: 1.3vmax;
+                cursor: pointer;
+                transition: all 0.5s;
+
+                &:hover{
+                    background-color: rgb(19, 18, 18);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import "mixin";
+
+.payment-conatiner {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  .form-container {
+    margin-top: 8vmax;
+    .payment-form {
+      background-color: white;
+      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+      padding: 1vmax;
+      padding-bottom: 5vmax;
+      width: 30vw;
+      margin: auto;
+      > h2 {
+        margin: auto;
+        margin-top: 1vmax;
+        width: 55%;
+        font: 500 1.7vmax "Roboto";
+        color: rgba(0, 0, 0, 0.625);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.325);
+        padding-bottom: 1vmax;
+      }
+      > div {
+        transform: translateX(-2.5vmax);
+        > div {
+          display: flex;
+          margin-top: 2vmax;
+          margin-right: 2vmax;
+          width: 100%;
+          .payment-input {
+            border: 1px solid rgb(167, 166, 166);
+            width: 60%;
+            padding: 0.5vmax;
+            padding-left: 3vmax;
+            margin: auto;
+            border-radius: 8px;
+          }
+          > svg {
+            padding-left: 1vmax;
+            transform: translateX(5vmax);
+            margin: auto;
+            box-sizing: border-box;
+            width: 3vmax;
+          }
+        }
+      }
+
+      > button {
+        margin: auto;
+        margin-top: 2rem;
+        width: 30%;
+        height: 2.2rem;
+        color: white;
+        background-color: tomato;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: rgb(194, 35, 8);
+        }
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "_mixin";
+
+.footer{
+    margin-top: 10vmax;
+    @include flex(row,1rem);
+    padding: 2rem;
+    background-color: #222121;
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    .download{
+        width: 20%;
+        text-align: center;
+        @include flex(column,0.3rem,center,center);
+        >img{
+            margin-top: 1rem;
+            width: 10vmax;
+        }
+    }
+    .details{
+        width: 60%;
+        text-align: center;
+        >h1{
+            font-weight: 700;
+            color: #EB4034;
+            font-size: 4vmax;
+            margin: 0;
+        }
+        @include flex(column,0.3rem,center,center);
+        >span{
+            font-family: "Gill Sans";
+        }
+    }
+
+    .follow{
+        width: 20%;
+        padding-right: 0.5rem;
+        text-align: center;
+        >h4{
+            font-weight: 700;
+            font-size: 1.4vmax;
+            text-decoration: underline;
+            padding: 0;
+            margin: 0;
+        }
+        >a{
+            font-family: "Gill Sans", "Gill Sans MT";
+            color: white;
+            font-size: 1.3vmax;
+            padding: 0.1rem;
+            text-decoration: none;
+            transition: all 0.5s;
+            
+        }
+        a:hover{
+            color: #EB4034;
+        }
+        @include flex(column,0.4rem,center,center);
+    }
+}

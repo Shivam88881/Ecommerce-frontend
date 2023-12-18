@@ -1,0 +1,74 @@
+@import "mixin";
+.shipping-container{
+    margin-top: 3vmax;
+    width: 100vw;
+    max-width: 100%;
+    @include flex(column,0,center,center);
+
+    .shipping-box{
+        background-color: white;
+        width: 30vw;
+        box-sizing: border-box;
+        overflow: hidden;
+        .shipping-heading{
+            color: rgba(0,0,0,0.664);
+            margin: auto;
+            width: 50%;
+            font-size: 1.3vmax;
+            font-weight: 400;
+            padding: 1.3vmax;
+            border-bottom: 1px solid rgba(0,0,0,0.264);
+        }
+
+        >form{
+            >div{
+                margin-top: 3vmax;
+                > input,select {
+                    text-align: left;
+                    padding-left: 3vmax;
+                    padding-right: 1vmax;
+                    width: 80%;
+                    height: 2.2vmax;
+                    font: 300 0.9vmax cursive;
+                    border-radius: 4px;
+                    outline: none;
+                    border: 1px solid rgba(0, 0, 0, 0.678);
+                }
+
+                >select{
+                    width: 94%;
+                    height: 2.4vmax;
+                    >option{
+                        text-align: left;
+                    }
+                }
+
+                >svg{
+                    padding-top: 0.4vmax;
+                    position: absolute;
+                    transform: translateX(1vmax);
+                    font-size: 1.6vmax;
+                    color: rgba(0,0,0,0.623);
+                    margin: 0 auto;
+                }
+            }
+
+            >button{
+                margin: 2vmax auto;
+                width: 93%;
+                height: 2rem;
+                color: white;
+                background-color: tomato;
+                outline: none;
+                border: none;
+                border-radius: 8px;
+    
+                &:hover{
+                    background-color: rgb(194, 35, 8);
+                }
+                cursor: pointer;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import "mixin";
+
+.item-card {
+    @include grid(4fr 1fr 1fr, 0);
+    // place-items: start;
+    margin-top: 2vmax;
+  .item-detail {
+    @include flex(row,1vmax,unset,center);
+    > img {
+      width: 6vmax;
+    }
+    >div{
+        // grid-column-start: 1;
+        text-align: left;
+        >p{
+            text-align: left;
+            font-size: 0.9vmax;
+            color: rgba(0,0,0,0.825);
+            padding-top: 0.1vmax;
+        }
+        .product-name{
+            text-align: left;
+            font: 300 0.9vmax cursive;
+            color: rgba(0,0,0,0.825);
+        }
+
+        .remove-btn{
+            border: none;
+            color: tomato;
+            border: none;
+            outline: none;
+            background-color: white;
+            padding: 0;
+            font-size: 0.8vmax;
+            cursor: pointer;
+
+            transition: all 0.05s;
+
+            &:hover{
+                transform: scaleX(1.1);
+                color: rgb(247, 41, 5);
+            }
+        }
+    }
+  }
+
+  .quantity{
+    text-align: left;
+    margin: auto 0;
+    >input{
+        border: none;
+        padding: 0.5vmax;
+        width: 2vmax;
+        outline: none;
+        font: 400 0.8vmax "Roboto";
+        color: rgba(0, 0, 0, 0.74);
+    }
+    > button {
+        border: none;
+        background-color: rgba(0, 0, 0, 0.616);
+        padding: 0.5vmax;
+        padding-left: 0.55rem;
+        padding-right: 0.55rem;
+        color: white;
+        transition: all 0.5s;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.767);
+        }
+      }
+  }
+
+  .subtotal{
+    text-align: right;
+    margin: auto 0;
+    color: rgba(0,0,0,0.825);
+    font-family: cursive;
+    font-size: 1vmax;
+  }
+}
